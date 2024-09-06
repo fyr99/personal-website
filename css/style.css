@@ -60,6 +60,30 @@ body {
   justify-content: flex-start;
 }
 
+.landing__intro-text-wrapper[data-direction="col"] {
+  gap: 5px;
+  flex-direction: column;
+}
+
+.landing__intro-social-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  list-style: none;
+}
+
+.landing__intro-social-list__item a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: #000;
+  border-radius: 999px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .landing__intro-text-wrapper p {
   max-width: 300px;
   text-align: left;
