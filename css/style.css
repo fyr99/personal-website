@@ -235,6 +235,7 @@ body {
   color: #f2fa9b;
   grid-column: 2;
   grid-row: 1;
+  text-align: right;
 }
 
 .section__hobbies-container p {
@@ -330,6 +331,10 @@ footer {
     flex-direction: column;
     gap: 5px;
     pad: 20px 10px;
+  }
+
+  .section__hobbies h2 {
+    text-align: left;
   }
 
   .section__hobbies-container {
