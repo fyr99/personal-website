@@ -259,3 +259,13 @@ body {
   display: block;
   border-radius: 20px;
 }
+
+footer {
+  padding: 80px 0;
+  text-align: center;
+  color: #f2fa9b;
+}
+
+.me {
+  text-decoration: underline;
+}
