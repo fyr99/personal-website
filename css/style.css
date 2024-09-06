@@ -150,4 +150,64 @@ body {
   color: #f2fa9b;
   grid-column: 2;
   grid-row: 2;
+  text-wrap: pretty;
+}
+
+.section__work {
+  width: calc(100% - 40px);
+  margin: 20px;
+}
+
+.section__work-container {
+  margin: 0 auto;
+  margin-top: 30px;
+  max-width: 1200px;
+}
+
+.section__work h2 {
+  font-size: 8rem;
+  color: #f2fa9b;
+  text-align: right;
+}
+
+.section__work-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.section__work-wrapper p {
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #f2fa9b;
+  max-width: 320px;
+  text-align: right;
+}
+
+.section__work-timeline {
+  margin-top: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #f2fa9b;
+  border-radius: 20px;
+  gap: 50px;
+  padding: 40px 60px;
+  color: #000;
+}
+
+.section__work-timeline span {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.section__work-timeline-description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section__work-timeline-description p {
+  font-weight: 400;
+  font-size: 1.1rem;
 }
