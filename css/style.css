@@ -27,6 +27,7 @@ body {
 }
 
 .landing__intro-image {
+  transition: all 0.3s ease-in-out;
   width: 550px;
   position: absolute;
   bottom: -20%;
@@ -40,21 +41,20 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: column;
   padding: 0 40px 40px 40px;
   margin: 0 auto;
 }
 
 .landing__intro-name {
-  font-size: 15rem;
-  letter-spacing: -20px;
+  font-size: clamp(4rem, 14vw, 15rem);
+  letter-spacing: clamp(-5px, -1vw, -20px);
   text-align: center;
   font-weight: 900;
   width: 100%;
   margin-block: 0;
   margin-inline: 0;
-  margin-top: -40px;
 }
 
 .landing__intro-text-wrapper {
@@ -62,6 +62,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 30px;
 }
 
 .landing__intro-text-wrapper[data-direction="col"] {
@@ -125,6 +126,7 @@ body {
 
 .section__about {
   width: calc(100% - 40px);
+  margin: 0 auto;
   margin-top: 100px;
 }
 
@@ -138,7 +140,7 @@ body {
 }
 
 .section__about h2 {
-  font-size: 8rem;
+  font-size: clamp(3rem, 5vw, 8rem);
   color: #f2fa9b;
   grid-column: 1;
   grid-row: 1;
@@ -155,6 +157,7 @@ body {
 
 .section__work {
   width: calc(100% - 40px);
+  margin: 0 auto;
   margin-top: 100px;
 }
 
@@ -165,7 +168,7 @@ body {
 }
 
 .section__work h2 {
-  font-size: 8rem;
+  font-size: clamp(3rem, 5vw, 8rem);
   color: #f2fa9b;
   text-align: right;
 }
@@ -214,6 +217,7 @@ body {
 
 .section__hobbies {
   width: calc(100% - 40px);
+  margin: 0 auto;
   margin-top: 100px;
 }
 
@@ -227,7 +231,7 @@ body {
 }
 
 .section__hobbies-container h2 {
-  font-size: 8rem;
+  font-size: clamp(3rem, 5vw, 8rem);
   color: #f2fa9b;
   grid-column: 2;
   grid-row: 1;
@@ -268,4 +272,92 @@ footer {
 
 .me {
   text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  /*  .landing__intro-name {
+    font-size: 8rem;
+    letter-spacing: 0;
+    margin-top: -20px;
+  } */
+}
+
+@media (max-width: 768px) {
+  .landing__intro {
+    height: auto;
+  }
+
+  .landing__intro-text-wrapper[data-alignment="right"] {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .landing__intro-text-wrapper p[data-align="right"] {
+    text-align: left;
+  }
+
+  .landing__intro-image {
+    transition: all 0.3s ease-in-out;
+    width: 350px;
+    left: 75%;
+  }
+
+  .section__about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section__work-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section__work h2 {
+    text-align: left;
+  }
+
+  .section__work-wrapper {
+    justify-content: flex-start;
+  }
+
+  .section__work-wrapper p {
+    text-align: left;
+  }
+
+  .section__work-timeline {
+    flex-direction: column;
+    gap: 5px;
+    pad: 20px 10px;
+  }
+
+  .section__hobbies-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section__hobbies-images {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  .section__hobbies-images img {
+    width: 100%;
+    height: 600px;
+  }
+}
+
+@media (max-width: 650px) {
+  .landing__intro-image {
+    transition: all 0.3s ease-in-out;
+    width: 300px;
+    left: 75%;
+  }
+}
+
+@media (max-width: 650px) {
+  .landing__intro-image {
+    display: none;
+  }
 }
