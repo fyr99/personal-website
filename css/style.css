@@ -5,73 +5,72 @@
 }
 
 body {
-  background-color: #161616;
-  color: #eaeaea;
+  background-color: #1f2e13;
+  color: #000;
   height: 100dvh;
   font-family: "Poppins", sans-serif;
 }
 
 .landing__intro {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 90%;
-  width: 100%;
-  padding: 20px;
-  background-color: #353535;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-}
-
-.landing__intro-container {
+  width: calc(100% - 40px);
+  margin: 20px;
+  border-radius: 40px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
+  background-color: #f7fc85;
+  position: relative;
+  overflow: hidden;
 }
 
 .landing__intro-image {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  width: 550px;
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
 }
 
-.landing__intro-image img {
-  width: 150px;
-  height: 150px;
-  border-radius: 100%;
-  border: 2px solid #eaeaea;
+.landing__intro-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0 40px 40px 40px;
+  margin: 0 auto;
 }
 
 .landing__intro-name {
-  position: absolute;
-  width: max-content;
-  top: 40%;
-  left: 200px;
-  rotate: -10deg;
-  background-color: #eaeaea;
-  color: #161616;
-  padding: 10px 15px;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.landing__intro-description {
+  font-size: 15rem;
+  letter-spacing: -20px;
   text-align: center;
-  text-wrap: pretty;
+  font-weight: 900;
+  width: 100%;
+  margin-block: 0;
+  margin-inline: 0;
+  margin-top: -40px;
 }
 
-.landing__intro-github {
+.landing__intro-text-wrapper {
+  text-wrap: pretty;
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #eaeaea;
-  padding: 10px 15px;
-  border-radius: 999px;
-  text-decoration: none;
-  color: #161616;
+  justify-content: flex-start;
+}
+
+.landing__intro-text-wrapper p {
+  max-width: 300px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.landing__intro-text-wrapper[data-alignment="right"] {
+  justify-content: flex-end;
+}
+
+.landing__intro-text-wrapper p[data-align="right"] {
+  text-align: right;
 }
